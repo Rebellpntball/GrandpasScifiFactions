@@ -10,6 +10,7 @@ class eAIFactionFreeTraders : eAIFaction
 
 	override bool IsFriendly(notnull eAIFaction other)
 	{
+		// Friendly to everyone including all base Expansion factions
 		return true;
 	}
 

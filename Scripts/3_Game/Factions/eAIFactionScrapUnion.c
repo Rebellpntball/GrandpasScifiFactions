@@ -11,6 +11,9 @@ class eAIFactionScrapUnion : eAIFaction
 	override bool IsFriendly(notnull eAIFaction other)
 	{
 		if (other.IsInherited(eAIFactionScrapUnion)) return true;
+		if (other.IsInherited(eAIFactionCivilian)) return true;
+		if (other.IsInherited(eAIFactionPassive)) return true;
+		if (other.IsInherited(eAIFactionObservers)) return true;
 		return false;
 	}
 

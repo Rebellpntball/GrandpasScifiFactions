@@ -13,6 +13,10 @@ class eAIFactionTheUnshackled : eAIFaction
 	override bool IsFriendly(notnull eAIFaction other)
 	{
 		if (other.IsInherited(eAIFactionTheUnshackled)) return true;
+		// Anti-tech path still leaves civilians/passives alone by default
+		if (other.IsInherited(eAIFactionCivilian)) return true;
+		if (other.IsInherited(eAIFactionPassive)) return true;
+		if (other.IsInherited(eAIFactionObservers)) return true;
 		return false;
 	}
 

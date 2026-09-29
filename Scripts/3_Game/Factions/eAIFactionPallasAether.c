@@ -12,6 +12,9 @@ class eAIFactionPallasAether : eAIFaction
 	override bool IsFriendly(notnull eAIFaction other)
 	{
 		if (other.IsInherited(eAIFactionPallasAether)) return true;
+		// Hostile to players' paths and scavs; ignore pure passives so they don't chain-aggro traders
+		if (other.IsInherited(eAIFactionPassive)) return true;
+		if (other.IsInherited(eAIFactionObservers)) return true;
 		return false;
 	}
 
