@@ -19,3 +19,15 @@ class eAIFactionNACContinuity : eAIFaction
 
 	override string GetDisplayName() { return "NAC Continuity"; }
 };
+
+[eAIRegisterFaction(eAIFactionNACContinuityGuards)]
+class eAIFactionNACContinuityGuards : eAIFactionNACContinuity
+{
+	void eAIFactionNACContinuityGuards()
+	{
+		m_Loadout = "NAC_Continuity_Guard_Loadout";
+		m_IsGuard = true;
+	}
+
+	override string GetDisplayName() { return "NAC Continuity Guards"; }
+};

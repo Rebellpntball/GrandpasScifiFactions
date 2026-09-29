@@ -20,3 +20,15 @@ class eAIFactionFreshDayzMilitia : eAIFaction
 
 	override string GetDisplayName() { return "Fresh Dayz Militia"; }
 };
+
+[eAIRegisterFaction(eAIFactionFreshDayzMilitiaGuards)]
+class eAIFactionFreshDayzMilitiaGuards : eAIFactionFreshDayzMilitia
+{
+	void eAIFactionFreshDayzMilitiaGuards()
+	{
+		m_Loadout = "FreshDayz_Militia_Guard_Loadout";
+		m_IsGuard = true;
+	}
+
+	override string GetDisplayName() { return "Fresh Dayz Militia Guards"; }
+};

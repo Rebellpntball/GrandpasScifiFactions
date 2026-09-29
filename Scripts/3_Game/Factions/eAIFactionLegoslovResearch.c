@@ -19,3 +19,15 @@ class eAIFactionLegoslovResearch : eAIFaction
 
 	override string GetDisplayName() { return "Legoslov Institute"; }
 };
+
+[eAIRegisterFaction(eAIFactionLegoslovResearchGuards)]
+class eAIFactionLegoslovResearchGuards : eAIFactionLegoslovResearch
+{
+	void eAIFactionLegoslovResearchGuards()
+	{
+		m_Loadout = "Legoslov_Research_Guard_Loadout";
+		m_IsGuard = true;
+	}
+
+	override string GetDisplayName() { return "Legoslov Institute Guards"; }
+};

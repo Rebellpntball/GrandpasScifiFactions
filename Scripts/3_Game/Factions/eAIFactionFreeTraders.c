@@ -15,3 +15,15 @@ class eAIFactionFreeTraders : eAIFaction
 
 	override string GetDisplayName() { return "Free Traders"; }
 };
+
+[eAIRegisterFaction(eAIFactionFreeTradersGuards)]
+class eAIFactionFreeTradersGuards : eAIFactionFreeTraders
+{
+	void eAIFactionFreeTradersGuards()
+	{
+		m_Loadout = "FreeTraders_Guard_Loadout";
+		m_IsGuard = true;
+	}
+
+	override string GetDisplayName() { return "Free Traders Guards"; }
+};

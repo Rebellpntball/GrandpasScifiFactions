@@ -16,3 +16,15 @@ class eAIFactionScrapUnion : eAIFaction
 
 	override string GetDisplayName() { return "Scrap Union"; }
 };
+
+[eAIRegisterFaction(eAIFactionScrapUnionGuards)]
+class eAIFactionScrapUnionGuards : eAIFactionScrapUnion
+{
+	void eAIFactionScrapUnionGuards()
+	{
+		m_Loadout = "Scrap_Union_Guard_Loadout";
+		m_IsGuard = true;
+	}
+
+	override string GetDisplayName() { return "Scrap Union Guards"; }
+};
