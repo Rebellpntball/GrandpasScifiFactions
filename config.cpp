@@ -2,24 +2,24 @@
 
 class CfgPatches
 {
-	class Einarvargr_Factions_scripts
+	class GrandpasScifiFactions_scripts
 	{
 		units[] = {};
 		weapons[] = {};
-		name = "Einarvargr Factions";
-		author = "Einarvargr";
+		name = "Grandpas SciFi Factions";
+		author = "Rebellpntball / Grandpa";
 		requiredAddons[] = {"DayZExpansion_AI_Scripts"};
 	};
 };
 
 class CfgMods
 {
-	class Einarvargr_Factions
+	class GrandpasScifiFactions
 	{
-		dir = "Einarvargr_Factions";
-		name = "Einarvargr Factions";
-		credits = "Einarvargr";
-		author = "Einarvargr";
+		dir = "GrandpasScifiFactions";
+		name = "Grandpas SciFi Factions";
+		credits = "Rebellpntball";
+		author = "Rebellpntball";
 		type = "mod";
 
 		dependencies[] = {"Game"}; 
@@ -29,9 +29,8 @@ class CfgMods
 			class gameScriptModule
 			{
 				value = "";
-				// Pfad mit PBO-Prefix, genau wie bei Dolphin
-				files[] = {"Einarvargr_Factions/Scripts/3_Game"};
-			};
+				files[] = {"GrandpasScifiFactions/Scripts/3_Game"};
+			}
 		}
 	};
 };
