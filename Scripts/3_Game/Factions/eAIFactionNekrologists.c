@@ -15,7 +15,17 @@ class eAIFactionNekrologists : eAIFaction
 	override bool IsFriendly(notnull eAIFaction other)
 	{
 		if (other.IsInherited(eAIFactionNekrologists)) return true;
+		// Pathogen faction - aligned with infected AI if present
+		if (other.IsInherited(eAIFactionInfected)) return true;
 		return false;
+	}
+
+	// Do not fight zombies / infected creatures (Lantian pathogen kinship)
+	override bool IsFriendlyEntity(EntityAI other, DayZPlayer factionMember = null)
+	{
+		if (other.IsInherited(DayZCreatureAI)) return true;
+		if (other.IsInherited(ZombieBase)) return true;
+		return super.IsFriendlyEntity(other, factionMember);
 	}
 
 	override string GetDisplayName() { return "Nekrologists"; }
